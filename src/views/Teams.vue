@@ -18,9 +18,9 @@ import { RouterLink } from "vue-router";
                 <h2>{{ teams[0].teamName }}</h2>
             </div>
         </RouterLink>
-       
-
     </div>
+    <br>
+    <RouterLink to="/" >Return back to Home </RouterLink>
 </template>
 
 

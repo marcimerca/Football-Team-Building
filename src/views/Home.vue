@@ -4,8 +4,14 @@
         <h1>
             Welcome to Football Team Building
         </h1>
-        <RouterLink to="/teams">Your teams</RouterLink>
+        <RouterLink to="/teams">Teams</RouterLink>
+        <RouterLink to="/players">Players</RouterLink>
+
     </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+a {
+    margin: 0 10px;
+}
+</style>
