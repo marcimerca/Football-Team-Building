@@ -1,7 +1,10 @@
+<script setup>
+import teams from "../data/teams.json"
+</script>
 <template>
     <div>
         <h1>
-            Specific team
+              {{ teams[0].teamName }}
         </h1>
     </div>
 </template>
