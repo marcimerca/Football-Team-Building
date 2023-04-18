@@ -1,0 +1,73 @@
+[
+    {
+      "teamId": "001",
+      "teamName": "AC Milan",
+      "teamLogo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Logo_of_AC_Milan.svg/1306px-Logo_of_AC_Milan.svg.png",
+      "teamPlayers": [
+        {
+          "playerId": "001",
+          "playerName": "Gianluigi Donnarumma",
+          "playerPosition": "Goalkeeper",
+          "playerNumber": "1",
+          "playerImage": "https://www.thesun.co.uk/wp-content/uploads/2019/07/NINTCHDBPICT000491201100.jpg?strip=all&w=960"
+        },
+        {
+          "playerId": "002",
+          "playerName": "Alessio Romagnoli",
+          "playerPosition": "Defender",
+          "playerNumber": "13",
+          "playerImage": "https://www.thesun.co.uk/wp-content/uploads/2019/07/NINTCHDBPICT000491201100.jpg?strip=all&w=960"
+        },
+        {
+          "playerId": "003",
+          "playerName": "Franck Kessie",
+          "playerPosition": "Midfielder",
+          "playerNumber": "21",
+          "playerImage": "https://www.thesun.co.uk/wp-content/uploads/2019/07/NINTCHDBPICT000491201100.jpg?strip=all&w=960"
+        },
+        {
+          "playerId": "004",
+          "playerName": "Zlatan Ibrahimovic",
+          "playerPosition": "Forward",
+          "playerNumber": "10",
+          "playerImage": "https://www.thesun.co.uk/wp-content/uploads/2019/07/NINTCHDBPICT000491201100.jpg?strip=all&w=960"
+        }
+      ]
+    },
+    {
+      "teamId": "002",
+      "teamName": "Juventus",
+      "teamLogo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Juventus_FC_2017_logo.svg/640px-Juventus_FC_2017_logo.svg.png",
+      "teamPlayers": [
+        {
+          "playerId": "001",
+          "playerName": "Gianluigi Donnarumma",
+          "playerPosition": "Goalkeeper",
+          "playerNumber": "1",
+          "playerImage": "https://www.thesun.co.uk/wp-content/uploads/2019/07/NINTCHDBPICT000491201100.jpg?strip=all&w=960"
+        },
+        {
+          "playerId": "002",
+          "playerName": "Alessio Romagnoli",
+          "playerPosition": "Defender",
+          "playerNumber": "13",
+          "playerImage": "https://www.thesun.co.uk/wp-content/uploads/2019/07/NINTCHDBPICT000491201100.jpg?strip=all&w=960"
+        },
+        {
+          "playerId": "003",
+          "playerName": "Franck Kessie",
+          "playerPosition": "Midfielder",
+          "playerNumber": "21",
+          "playerImage": "https://www.thesun.co.uk/wp-content/uploads/2019/07/NINTCHDBPICT000491201100.jpg?strip=all&w=960"
+        },
+        {
+          "playerId": "004",
+          "playerName": "Zlatan Ibrahimovic",
+          "playerPosition": "Forward",
+          "playerNumber": "10",
+          "playerImage": "https://www.thesun.co.uk/wp-content/uploads/2019/07/NINTCHDBPICT000491201100.jpg?strip=all&w=960"
+        }
+      ]
+    }
+  ]
+
