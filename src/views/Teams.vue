@@ -20,7 +20,7 @@ import { RouterLink } from "vue-router";
         </RouterLink>
     </div>
     <br>
-    <RouterLink to="/" >Return back to Home </RouterLink>
+     <span>Return back to </span><RouterLink to="/"><button>Home</button></RouterLink>
 </template>
 
 
