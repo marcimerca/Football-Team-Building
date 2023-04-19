@@ -1,7 +1,7 @@
 {
   "name": "football-team-building",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
   "type": "module",
   "scripts": {
     "dev": "vite --port 8080",
@@ -11,6 +11,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "firebase": "^9.20.0",
     "vue": "^3.2.47",
     "vue-router": "^4.1.6",
     "vuetify": "^3.1.14"
