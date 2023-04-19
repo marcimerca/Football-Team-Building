@@ -27,13 +27,12 @@
         <p>Click one of the button below to start explore this project.</p>
     </div>
 
-    <button>
+    <v-btn>
         <RouterLink to="/teams">Teams</RouterLink>
-    </button>
-    <button>
+    </v-btn>
+   <v-btn>
         <RouterLink to="/players">Players</RouterLink>
-    </button>
-     <v-btn> Vuetify Button </v-btn>
+    </v-btn>
 </template>
 
 <style scoped>
@@ -55,11 +54,12 @@
 a {
 
     margin: 0 10px;
-    color: white;
+    color: black;
 }
 
 button {
-    margin: 5px 10px;
+    margin: 20px 10px;
 
-    margin: 0 10px;
-}</style>
+}
+
+</style>
