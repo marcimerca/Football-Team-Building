@@ -2,11 +2,21 @@
 import teams from "../data/teams.json"
 </script>
 <template>
-    <div>
+    <header>
+        <img class="logo" :src="teams[0].teamLogo">
         <h1>
-              {{ teams[0].teamName }}
-        </h1>
-    </div>
+            {{ teams[0].teamName }} </h1>
+    </header>
+    
 </template>
 
-<style scoped></style>
+<style scoped>
+header {
+    display: flex;
+    align-items: center;
+}
+.logo {
+    width: 90px;
+    margin-right: 10px;
+}
+</style>
