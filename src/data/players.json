@@ -2,29 +2,45 @@
   {
     "playerId": "001",
     "playerName": "Mike Maignan",
+    "playerDateOfBirth": "03/07/1995",
+    "playerNationality": "France",
+    "playerHeight": "1,91 m",
     "playerPosition": "Goalkeeper",
     "playerNumber": "16",
-    "playerImage": "https://img.a.transfermarkt.technology/portrait/header/182906-1681459155.jpg?lm=1"
+    "playerImage": "https://img.a.transfermarkt.technology/portrait/header/182906-1681459155.jpg?lm=1",
+    "playerCover": "https://www.milanweb.it/wp-content/uploads/2023/04/Mike-Maignan-20230414-Milanweb.it_.jpg"
   },
   {
     "playerId": "002",
     "playerName": "Sandro Tonali",
+    "playerDateOfBirth": "08/05/2000",
+    "playerNationality": "Italy",
+    "playerHeight": "1,81 m",
     "playerPosition": "Midfielder",
     "playerNumber": "8",
-    "playerImage": "https://img.a.transfermarkt.technology/portrait/header/397033-1616775399.jpg?lm=1"
+    "playerImage": "https://img.a.transfermarkt.technology/portrait/header/397033-1616775399.jpg?lm=1",
+    "playerCover": "https://www.repstatic.it/content/nazionale/img/2022/01/20/212730167-4581ecc7-27fc-4fd5-b03f-9df18f3164ab.jpg"
   },
   {
     "playerId": "003",
     "playerName": "Davide Calabria",
+    "playerDateOfBirth": "06/12/1996",
+    "playerNationality": "Italy",
+    "playerHeight": " 1,76 m",
     "playerPosition": "Defender",
     "playerNumber": "2",
-    "playerImage": "https://img.a.transfermarkt.technology/portrait/header/262523-1595926678.jpg?lm=1"
+    "playerImage": "https://img.a.transfermarkt.technology/portrait/header/262523-1595926678.jpg?lm=1",
+    "playerCover": "https://www.milannews24.com/wp-content/uploads/2021/05/Calabria_2NC6294-1-1.jpg"
   },
   {
     "playerId": "004",
     "playerName": "Zlatan Ibrahimovic",
+    "playerDateOfBirth": "03/10/1981",
+    "playerNationality": "Sweden",
+    "playerHeight": "1,95 m",
     "playerPosition": "Forward",
     "playerNumber": "11",
-    "playerImage": "https://img.a.transfermarkt.technology/portrait/header/3455-1579506060.jpg?lm=1"
+    "playerImage": "https://img.a.transfermarkt.technology/portrait/header/3455-1579506060.jpg?lm=1",
+    "playerCover": "https://www.repstatic.it/content/nazionale/img/2023/02/27/093128570-70aa4058-cb81-47c5-a370-776772fb1d8a.jpg"
   }
 ]
