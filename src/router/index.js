@@ -39,6 +39,7 @@ const router = createRouter({
       path: "/players/:playerId",
       name: "player-details",
       component: PlayerDetails,
+      props: true,
     },
     {
       path: "/:pathMatch(.*)*",
