@@ -1,10 +1,22 @@
 <script setup>
-import teams from "../data/teams.json";
+import { ref } from "vue";
 import { useRouter } from "vue-router";
+import { Database } from "../services/database";
 
 const router = useRouter();
 
 const goToTeam = (teamId) => router.push(`/teams/${teamId}`);
+
+// ? empty array of teams => we use "ref" to make it reactive => UI changes automatically
+const teams = ref([]);
+// ? This function makes a call to the database and gets all the teams data and stores it in the "teams" variable
+const getTeams = async () => {
+  teams.value = await Database.Teams.get();
+};
+// ? This function is called when the component is mounted => it gets all the teams data
+getTeams();
+
+// SEE services/database.js for more details
 </script>
 
 <template>
@@ -12,7 +24,7 @@ const goToTeam = (teamId) => router.push(`/teams/${teamId}`);
     <h1>Teams</h1>
   </div>
 
-  <div class="teams-container">
+  <div class="teams-container" v-if="teams">
     <v-card
       :title="team.teamName"
       :subtitle="team.teamId"
