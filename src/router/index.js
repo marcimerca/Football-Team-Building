@@ -25,9 +25,10 @@ const router = createRouter({
       component: Teams,
     },
     {
-      path: "/teams/:id",
+      path: "/teams/:teamId",
       name: "team-details",
       component: TeamDetails,
+      props: true,
     },
     {
       path: "/players",

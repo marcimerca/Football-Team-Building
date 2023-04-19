@@ -1,0 +1,30 @@
+[
+  {
+    "playerId": "001",
+    "playerName": "Gianluigi Donnarumma",
+    "playerPosition": "Goalkeeper",
+    "playerNumber": "1",
+    "playerImage": "https://www.thesun.co.uk/wp-content/uploads/2019/07/NINTCHDBPICT000491201100.jpg?strip=all&w=960"
+  },
+  {
+    "playerId": "002",
+    "playerName": "Alessio Romagnoli",
+    "playerPosition": "Defender",
+    "playerNumber": "13",
+    "playerImage": "https://www.thesun.co.uk/wp-content/uploads/2019/07/NINTCHDBPICT000491201100.jpg?strip=all&w=960"
+  },
+  {
+    "playerId": "003",
+    "playerName": "Franck Kessie",
+    "playerPosition": "Midfielder",
+    "playerNumber": "21",
+    "playerImage": "https://www.thesun.co.uk/wp-content/uploads/2019/07/NINTCHDBPICT000491201100.jpg?strip=all&w=960"
+  },
+  {
+    "playerId": "004",
+    "playerName": "Zlatan Ibrahimovic",
+    "playerPosition": "Forward",
+    "playerNumber": "10",
+    "playerImage": "https://www.thesun.co.uk/wp-content/uploads/2019/07/NINTCHDBPICT000491201100.jpg?strip=all&w=960"
+  }
+]

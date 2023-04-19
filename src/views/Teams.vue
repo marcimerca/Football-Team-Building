@@ -1,24 +1,31 @@
 <script setup>
 import teams from "../data/teams.json";
-import { RouterLink } from "vue-router";
+import { useRouter } from "vue-router";
+
+const router = useRouter();
+
+const goToTeam = (teamId) => router.push(`/teams/${teamId}`);
 </script>
 
 <template>
   <div>
-    <h1>
-      Teams
-    </h1>
+    <h1>Teams</h1>
   </div>
 
   <div class="teams-container">
-    <RouterLink v-for="team in teams" :to="`/teams/${team.teamId}`" :key="team.teamId">
-      <div class="team-card">
-        <img class="logo" :src="team.teamLogo">
-        <h2>{{ team.teamName }}</h2>
-      </div>
-    </RouterLink>
+    <v-card
+      :title="team.teamName"
+      :subtitle="team.teamId"
+      v-for="team in teams"
+      :key="team.teamId"
+    >
+      <v-img class="logo" :src="team.teamLogo" />
+      <v-card-actions style="justify-content: center">
+        <v-btn @click="goToTeam(team.teamId)">Details</v-btn>
+      </v-card-actions>
+    </v-card>
   </div>
-  <br>
+  <br />
   <span>Return back to </span>
   <RouterLink to="/"><button>Home</button></RouterLink>
 </template>
@@ -27,6 +34,7 @@ import { RouterLink } from "vue-router";
 .teams-container {
   display: flex;
   justify-content: center;
+  gap: 20px;
 }
 
 .team-card {
@@ -41,8 +49,7 @@ import { RouterLink } from "vue-router";
 }
 
 .logo {
-  width: 90px;
-  margin-right: 10px;
+  height: 90px;
 }
 
 .team-photo {
