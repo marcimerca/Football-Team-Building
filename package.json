@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite --port 8080",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "format": "prettier --write src",
+    "prepare": "husky install"
   },
   "dependencies": {
     "vue": "^3.2.47",
@@ -15,6 +17,8 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.1.0",
+    "husky": "^8.0.3",
+    "prettier": "^2.8.7",
     "vite": "^4.2.0"
   }
 }
