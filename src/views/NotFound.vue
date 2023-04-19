@@ -1,9 +1,9 @@
 <script setup>
-import { RouterLink } from 'vue-router';
+import { RouterLink } from "vue-router";
 </script>
 
-
 <template>
+<<<<<<< HEAD
     <header>
         <h1>
             Sorry, the page you searched for doesn't exist :(
@@ -48,3 +48,12 @@ footer {
     margin-top: 90px;
 }
 </style>
+=======
+  <div>
+    <h1>Sorry, the page you searched for doesn't exist</h1>
+    <RouterLink to="/">Return back to Home </RouterLink>
+  </div>
+</template>
+
+<style scoped></style>
+>>>>>>> e0a2f073cab9f567157d7a15db74583c76b6264a

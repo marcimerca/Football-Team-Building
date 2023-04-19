@@ -1,5 +1,5 @@
-
 <template>
+<<<<<<< HEAD
     <header>
         <h1>
             Welcome to Football Team Building
@@ -24,6 +24,15 @@
             
          <button><RouterLink to="/teams">Teams</RouterLink></button>
         <button><RouterLink to="/players">Players</RouterLink></button>
+=======
+  <div>
+    <h1>Welcome to Football Team Building</h1>
+    <RouterLink to="/teams">Teams</RouterLink>
+    <RouterLink to="/players">Players</RouterLink>
+    <br />
+    <v-btn> Vuetify Button </v-btn>
+  </div>
+>>>>>>> e0a2f073cab9f567157d7a15db74583c76b6264a
 </template>
 
 <style scoped>
@@ -35,10 +44,14 @@
 font-size: 30px;
 }
 a {
+<<<<<<< HEAD
     margin: 0 10px;
     color: white;
 }
 button {
     margin: 5px 10px;
+=======
+  margin: 0 10px;
+>>>>>>> e0a2f073cab9f567157d7a15db74583c76b6264a
 }
 </style>
