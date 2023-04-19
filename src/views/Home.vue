@@ -1,38 +1,44 @@
 <template>
-    <header>
-        <h1>
-            Welcome to Football Team Building
-        </h1>
-    </header>
-    <div class="info">
-        <h1>About this project</h1>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis quibusdam nesciunt dolorum, autem ex
-            perspiciatis vero fugit cupiditate itaque ratione debitis aliquid natus, in soluta sint dicta eligendi
-            blanditiis architecto velit expedita quod nihil vel voluptas praesentium. Aliquam, quisquam dignissimos. Sequi
-            eaque necessitatibus commodi suscipit placeat, fugiat quaerat sit accusantium.</p>
-    </div>
-    <div class="why">
-        <h1>Why</h1>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis quibusdam nesciunt dolorum, autem ex
-            perspiciatis vero fugit cupiditate itaque ratione debitis aliquid natus, in soluta sint dicta eligendi
-            blanditiis architecto velit expedita quod nihil vel voluptas praesentium. Aliquam, quisquam dignissimos. Sequi
-            eaque necessitatibus commodi suscipit placeat, fugiat quaerat sit accusantium.</p>
-    </div>
-    <div class="who">
-        <h1>Who</h1>
-        <p>I'm Marcello Mercanzin, aspiring web developer.</p>
-    </div>
-    <div class="explore">
-        <h1>Explore</h1>
-        <p>Click one of the button below to start explore this project.</p>
-    </div>
+  <header>
+    <h1>Welcome to Football Team Building</h1>
+  </header>
+  <div class="info">
+    <h1>About this project</h1>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis
+      quibusdam nesciunt dolorum, autem ex perspiciatis vero fugit cupiditate
+      itaque ratione debitis aliquid natus, in soluta sint dicta eligendi
+      blanditiis architecto velit expedita quod nihil vel voluptas praesentium.
+      Aliquam, quisquam dignissimos. Sequi eaque necessitatibus commodi suscipit
+      placeat, fugiat quaerat sit accusantium.
+    </p>
+  </div>
+  <div class="why">
+    <h1>Why</h1>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis
+      quibusdam nesciunt dolorum, autem ex perspiciatis vero fugit cupiditate
+      itaque ratione debitis aliquid natus, in soluta sint dicta eligendi
+      blanditiis architecto velit expedita quod nihil vel voluptas praesentium.
+      Aliquam, quisquam dignissimos. Sequi eaque necessitatibus commodi suscipit
+      placeat, fugiat quaerat sit accusantium.
+    </p>
+  </div>
+  <div class="who">
+    <h1>Who</h1>
+    <p>I'm Marcello Mercanzin, aspiring web developer.</p>
+  </div>
+  <div class="explore">
+    <h1>Explore</h1>
+    <p>Click one of the button below to start explore this project.</p>
+  </div>
 
-    <v-btn>
-        <RouterLink to="/teams">Teams</RouterLink>
-    </v-btn>
-   <v-btn>
-        <RouterLink to="/players">Players</RouterLink>
-    </v-btn>
+  <v-btn>
+    <RouterLink to="/teams">Teams</RouterLink>
+  </v-btn>
+  <v-btn>
+    <RouterLink to="/players">Players</RouterLink>
+  </v-btn>
 </template>
 
 <style scoped>
@@ -40,26 +46,23 @@
 .why,
 .who,
 .explore {
-    margin-top: 40px;
-    text-align: center;
+  margin-top: 40px;
+  text-align: center;
 }
 
 .info h1,
 .why h1,
 .who h1,
 .explore h1 {
-    font-size: 30px;
+  font-size: 30px;
 }
 
 a {
-
-    margin: 0 10px;
-    color: black;
+  margin: 0 10px;
+  color: black;
 }
 
 button {
-    margin: 20px 10px;
-
+  margin: 20px 10px;
 }
-
 </style>
