@@ -4,39 +4,23 @@ import { RouterLink } from "vue-router";
 </script>
 
 <template>
-<<<<<<< HEAD
-    <div>
-        <h1>
-            Teams
-        </h1>
-    </div>
-
-    <div class="teams-container">
-        <RouterLink :to="`/teams/${teams[0].teamId}`" :key="teams[0].teamId">
-             <div class="team-card">
-                <img class="logo" :src="teams[0].teamLogo">
-                <h2>{{ teams[0].teamName }}</h2>
-            </div>
-        </RouterLink>
-    </div>
-    <br>
-     <span>Return back to </span><RouterLink to="/"><button>Home</button></RouterLink>
-=======
   <div>
-    <h1>Teams</h1>
+    <h1>
+      Teams
+    </h1>
   </div>
 
   <div class="teams-container">
-    <RouterLink :to="`/teams/${teams[0].teamId}`" :key="teams[0].teamId">
+    <RouterLink v-for="team in teams" :to="`/teams/${team.teamId}`" :key="team.teamId">
       <div class="team-card">
-        <img class="logo" :src="teams[0].teamLogo" />
-        <h2>{{ teams[0].teamName }}</h2>
+        <img class="logo" :src="team.teamLogo">
+        <h2>{{ team.teamName }}</h2>
       </div>
     </RouterLink>
   </div>
-  <br />
-  <RouterLink to="/">Return back to Home </RouterLink>
->>>>>>> e0a2f073cab9f567157d7a15db74583c76b6264a
+  <br>
+  <span>Return back to </span>
+  <RouterLink to="/"><button>Home</button></RouterLink>
 </template>
 
 <style scoped>
