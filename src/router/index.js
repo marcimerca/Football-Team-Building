@@ -4,6 +4,7 @@ import Teams from "../views/Teams.vue";
 import TeamDetails from "../views/TeamDetails.vue";
 import Players from "../views/Players.vue";
 import PlayerDetails from "../views/PlayerDetails.vue";
+import NewPlayer from "../views/NewPlayer.vue";
 
 import NotFound from "../views/NotFound.vue";
 
@@ -40,6 +41,11 @@ const router = createRouter({
       name: "player-details",
       component: PlayerDetails,
       props: true,
+    },
+    {
+      path: "/players/new",
+      name: "new player",
+      component: NewPlayer,
     },
     {
       path: "/:pathMatch(.*)*",
