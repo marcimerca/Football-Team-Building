@@ -1,5 +1,6 @@
 <script setup>
-import players from "../data/players.json";
+import { Database } from "../services/database"
+import { ref } from "vue";
 import { useRouter } from "vue-router";
 const router = useRouter();
 
@@ -10,7 +11,12 @@ const props = defineProps({
   },
 });
 
-const player = players.find((player) => player.playerId === props.playerId);
+const player = ref()
+
+Database.Players.getById(props.playerId).then(
+  (playerData) => (player.value = playerData)
+);
+
 </script>
 
 <template>
@@ -30,8 +36,7 @@ const player = players.find((player) => player.playerId === props.playerId);
         <v-card-item class="key-value">
           <v-chip> Date of birth </v-chip>
           <v-card-text class="card-text">
-            {{ player.playerDateOfBirth }}</v-card-text
-          >
+            {{ player.playerDateOfBirth }}</v-card-text>
         </v-card-item>
         <v-card-item class="key-value">
           <v-chip>Height</v-chip>

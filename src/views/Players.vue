@@ -21,7 +21,7 @@ getPlayers();
     <h1>List of players</h1>
   </header>
   <v-list class="list" lines="one">
-    <v-list-item class="list-item" @click="goToPlayer(player.playerId)" v-for="player in players" :key="player.playerId"
+    <v-list-item class="list-item" @click="goToPlayer(player.firebaseId)" v-for="player in players" :key="player.playerId"
       :title="player.playerName" :subtitle="player.playerPosition" :prepend-avatar="player.playerImage">
     </v-list-item>
   </v-list>
