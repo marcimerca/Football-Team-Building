@@ -1,5 +1,6 @@
-import { createApp } from "vue";
 import "./style.css";
+import { createApp } from "vue";
+import { store } from "./services/store";
 import router from "./router";
 import App from "./App.vue";
 
@@ -8,10 +9,18 @@ import "vuetify/styles";
 import { createVuetify } from "vuetify";
 import * as components from "vuetify/components";
 import * as directives from "vuetify/directives";
+import { aliases, md } from "vuetify/iconsets/md";
 
 const vuetify = createVuetify({
   components,
   directives,
+  icons: {
+    defaultSet: "md",
+    aliases,
+    sets: {
+      md,
+    },
+  },
 });
 
-createApp(App).use(router).use(vuetify).mount("#app");
+createApp(App).use(store).use(router).use(vuetify).mount("#app");
