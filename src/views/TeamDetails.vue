@@ -1,5 +1,6 @@
 <script setup>
-import teams from "../data/teams.json";
+import { Database } from "../services/database";
+import { ref } from "vue";
 
 const props = defineProps({
   teamId: {
@@ -8,7 +9,11 @@ const props = defineProps({
   },
 });
 
-const team = teams.find((team) => team.teamId === props.teamId);
+const team = ref();
+
+Database.Teams.getById(props.teamId).then(
+  (teamData) => (team.value = teamData)
+);
 </script>
 
 <template>

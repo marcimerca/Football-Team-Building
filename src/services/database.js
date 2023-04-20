@@ -8,6 +8,7 @@ import {
   getFirestore,
   setDoc,
   deleteDoc,
+  query,
 } from "firebase/firestore";
 const firebaseConfig = {
   apiKey: "AIzaSyC6kMMmtjs84rKZlm3qbnOadapfbqVOPMo",
@@ -45,11 +46,14 @@ export const Database = {
     collection: "players",
     get: async () => {
       const snapshot = await getDocs(collection(db, "players"));
-      return snapshot.docs.map((doc) => doc.data());
+      return snapshot.docs.map((doc) => ({
+        firebaseId: doc.id,
+        ...doc.data(),
+      }));
     },
     getById: async (id) => {
       const snapshot = await getDoc(doc(db, "players", id));
-      return snapshot.data();
+      return { firebaseId: snapshot.id, ...snapshot.data() };
     },
     add: async (data) => await addDoc(collection(db, "players"), data),
     bulkAdd: async (data) =>
@@ -64,11 +68,14 @@ export const Database = {
     collection: "teams",
     get: async () => {
       const snapshot = await getDocs(collection(db, "teams"));
-      return snapshot.docs.map((doc) => doc.data());
+      return snapshot.docs.map((doc) => ({
+        firebaseId: doc.id,
+        ...doc.data(),
+      }));
     },
     getById: async (id) => {
       const snapshot = await getDoc(doc(db, "teams", id));
-      return snapshot.data();
+      return { firebaseId: snapshot.id, ...snapshot.data() };
     },
     add: async (data) => await addDoc(collection(db, "teams"), data),
     bulkAdd: async (data) =>
@@ -83,11 +90,14 @@ export const Database = {
     collection: "users",
     get: async () => {
       const snapshot = await getDocs(collection(db, "users"));
-      return snapshot.docs.map((doc) => doc.data());
+      return snapshot.docs.map((doc) => ({
+        firebaseId: doc.id,
+        ...doc.data(),
+      }));
     },
     getById: async (id) => {
       const snapshot = await getDoc(doc(db, "users", id));
-      return snapshot.data();
+      return { firebaseId: snapshot.id, ...snapshot.data() };
     },
     add: async (data) => await addDoc(collection(db, "users"), data),
     bulkAdd: async (data) =>

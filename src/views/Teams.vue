@@ -11,7 +11,8 @@ const goToTeam = (teamId) => router.push(`/teams/${teamId}`);
 const teams = ref([]);
 // ? This function makes a call to the database and gets all the teams data and stores it in the "teams" variable
 const getTeams = async () => {
-  teams.value = await Database.Teams.get();
+  const res = await Database.Teams.get();
+  teams.value = res;
 };
 // ? This function is called when the component is mounted => it gets all the teams data
 getTeams();
@@ -33,7 +34,7 @@ getTeams();
     >
       <v-img class="logo" :src="team.teamLogo" />
       <v-card-actions style="justify-content: center">
-        <v-btn @click="goToTeam(team.teamId)">Details</v-btn>
+        <v-btn @click="goToTeam(team.firebaseId)">Details</v-btn>
       </v-card-actions>
     </v-card>
   </div>
