@@ -1,8 +1,19 @@
 <script setup>
-import players from "../data/players.json";
+import { ref } from "vue";
 import { useRouter } from "vue-router";
+import { Database } from "../services/database";
+
+
 const router = useRouter();
 const goToPlayer = (playerId) => router.push(`/players/${playerId}`);
+
+const players = ref([])
+const getPlayers = async () => {
+  players.value = await Database.Players.get();
+}
+
+getPlayers();
+
 </script>
 
 <template>
@@ -10,15 +21,8 @@ const goToPlayer = (playerId) => router.push(`/players/${playerId}`);
     <h1>List of players</h1>
   </header>
   <v-list class="list" lines="one">
-    <v-list-item
-      class="list-item"
-      @click="goToPlayer(player.playerId)"
-      v-for="player in players"
-      :key="player.playerId"
-      :title="player.playerName"
-      :subtitle="player.playerPosition"
-      :prepend-avatar="player.playerImage"
-    >
+    <v-list-item class="list-item" @click="goToPlayer(player.playerId)" v-for="player in players" :key="player.playerId"
+      :title="player.playerName" :subtitle="player.playerPosition" :prepend-avatar="player.playerImage">
     </v-list-item>
   </v-list>
 </template>
