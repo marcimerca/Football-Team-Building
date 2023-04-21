@@ -18,7 +18,9 @@ getPlayers();
   <header>
     <h1>List of players</h1>
   </header>
-  <v-btn @click="router.push(`/players/new`)">Add Player</v-btn>
+  <v-btn @click="router.push(`/players/new`)">
+    <v-icon icon="md:person_add" style="margin-right: 5px" /> Add Player</v-btn
+  >
   <v-list class="list" lines="one">
     <v-list-item
       class="list-item"
