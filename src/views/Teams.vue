@@ -1,24 +1,44 @@
 <script setup>
-import teams from "../data/teams.json";
-import { RouterLink } from "vue-router";
+import { ref } from "vue";
+import { useRouter } from "vue-router";
+import { Database } from "../services/database";
+
+const router = useRouter();
+
+const goToTeam = (teamId) => router.push(`/teams/${teamId}`);
+
+// ? empty array of teams => we use "ref" to make it reactive => UI changes automatically
+const teams = ref([]);
+// ? This function makes a call to the database and gets all the teams data and stores it in the "teams" variable
+const getTeams = async () => {
+  const res = await Database.Teams.get();
+  teams.value = res;
+};
+// ? This function is called when the component is mounted => it gets all the teams data
+getTeams();
+
+// SEE services/database.js for more details
 </script>
 
 <template>
   <div>
-    <h1>
-      Teams
-    </h1>
+    <h1>Teams</h1>
   </div>
 
-  <div class="teams-container">
-    <RouterLink v-for="team in teams" :to="`/teams/${team.teamId}`" :key="team.teamId">
-      <div class="team-card">
-        <img class="logo" :src="team.teamLogo">
-        <h2>{{ team.teamName }}</h2>
-      </div>
-    </RouterLink>
+  <div class="teams-container" v-if="teams">
+    <v-card
+      :title="team.teamName"
+      :subtitle="team.teamId"
+      v-for="team in teams"
+      :key="team.teamId"
+    >
+      <v-img class="logo" :src="team.teamLogo" />
+      <v-card-actions style="justify-content: center">
+        <v-btn @click="goToTeam(team.firebaseId)">Details</v-btn>
+      </v-card-actions>
+    </v-card>
   </div>
-  <br>
+  <br />
   <span>Return back to </span>
   <RouterLink to="/"><button>Home</button></RouterLink>
 </template>
@@ -27,6 +47,7 @@ import { RouterLink } from "vue-router";
 .teams-container {
   display: flex;
   justify-content: center;
+  gap: 20px;
 }
 
 .team-card {
@@ -41,8 +62,7 @@ import { RouterLink } from "vue-router";
 }
 
 .logo {
-  width: 90px;
-  margin-right: 10px;
+  height: 90px;
 }
 
 .team-photo {
