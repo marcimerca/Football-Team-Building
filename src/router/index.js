@@ -16,9 +16,14 @@ const loggedInGuard = async (to, from, next) => {
 
     await checkUserIsLoggedIn();
 
-    if (to.name !== "login" && !userStore.isAuthenticated)
+    if (!userStore.isAuthenticated) {
+      console.warn(
+        "User is not logged in, redirecting to login page",
+        "Wants to go to",
+        to.name
+      );
       next({ name: "login" });
-    else next();
+    } else next();
   } catch (err) {
     console.error(err);
     next({ name: "login" });

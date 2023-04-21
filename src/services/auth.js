@@ -2,30 +2,24 @@ import {
   getAuth,
   GoogleAuthProvider,
   signInWithPopup,
+  signOut,
   onAuthStateChanged,
 } from "firebase/auth";
 import { app } from "./firebase";
 import { useUserStore } from "../store/user";
 import { setIsLoading } from "./utils";
-import router from "../router";
 
 const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
 
 export const login = async () => {
-  const userStore = useUserStore();
   return signInWithPopup(auth, provider).then(({ user }) =>
-    userStore.setUser(user)
+    useUserStore().setUser(user)
   );
 };
 
 export const logout = async () => {
-  const userStore = useUserStore();
-  return auth.signOut().then(() => {
-    userStore.setUser(null);
-    router.push({ name: "login" });
-    return true;
-  });
+  return signOut(auth).then(() => useUserStore().setUser(null));
 };
 
 export const checkUserIsLoggedIn = () => {
@@ -35,20 +29,12 @@ export const checkUserIsLoggedIn = () => {
       auth,
       async (user) => {
         setIsLoading(false);
-        if (user) {
-          useUserStore().setUser(user);
-          resolve(user);
-        } else {
-          useUserStore().setUser(null);
-          router.push({ name: "login" });
-          setIsLoading(false);
-          reject(false);
-        }
+        useUserStore().setUser(user);
+        resolve(user);
       },
       (err) => {
-        useUserStore().setUser(null);
-        router.push({ name: "login" });
         setIsLoading(false);
+        useUserStore().setUser(null);
         reject(err);
       }
     );
