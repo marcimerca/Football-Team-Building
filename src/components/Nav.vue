@@ -15,14 +15,12 @@ const userStore = useUserStore();
           <v-btn @click="router.push(`/`)">Home</v-btn>
           <v-btn @click="router.push(`/teams`)">Teams</v-btn>
           <v-btn @click="router.push(`/players`)">Players</v-btn>
+          <v-btn v-if="userStore?.user" @click="router.push(`/account`)">
+            <v-icon icon="md:person" style="margin-right: 5px" />{{
+              userStore?.user?.displayName
+            }}</v-btn
+          >
         </div>
-        <span
-          style="display: flex; align-items: center; margin-right: 10px"
-          v-if="userStore?.user"
-        >
-          <v-icon icon="md:person" style="margin-right: 5px" />
-          {{ userStore?.user?.displayName }}
-        </span>
         <v-btn
           v-if="userStore?.user"
           @click="logout"

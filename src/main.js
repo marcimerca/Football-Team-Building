@@ -11,6 +11,10 @@ import * as components from "vuetify/components";
 import * as directives from "vuetify/directives";
 import { aliases, md } from "vuetify/iconsets/md";
 
+import { checkUserIsLoggedIn } from "./services/auth";
+
+checkUserIsLoggedIn();
+
 const vuetify = createVuetify({
   components,
   directives,

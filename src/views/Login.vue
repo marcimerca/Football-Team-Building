@@ -1,6 +1,5 @@
 <template>
   <div v-if="!userStore.user">
-    <p>Please login</p>
     <v-btn @click="login">Login With Google</v-btn>
   </div>
   <div v-else>
