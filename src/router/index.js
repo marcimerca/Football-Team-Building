@@ -1,10 +1,4 @@
 import { createRouter, createWebHistory } from "vue-router";
-import Home from "../views/Home.vue";
-import Teams from "../views/Teams.vue";
-import TeamDetails from "../views/TeamDetails.vue";
-import Players from "../views/Players.vue";
-import PlayerDetails from "../views/PlayerDetails.vue";
-import NotFound from "../views/NotFound.vue";
 
 import { useUserStore } from "../store/user";
 
@@ -36,7 +30,7 @@ const router = createRouter({
     {
       path: "/",
       name: "home",
-      component: Home,
+      component: () => import("../views/Home.vue"),
     },
     {
       path: "/home",
@@ -45,23 +39,23 @@ const router = createRouter({
     {
       path: "/teams",
       name: "teams",
-      component: Teams,
+      component: () => import("../views/Teams.vue"),
     },
     {
       path: "/teams/:teamId",
       name: "team-details",
-      component: TeamDetails,
+      component: () => import("../views/TeamDetails.vue"),
       props: true,
     },
     {
       path: "/players",
       name: "players",
-      component: Players,
+      component: () => import("../views/Players.vue"),
     },
     {
       path: "/players/:playerId",
       name: "player-details",
-      component: PlayerDetails,
+      component: () => import("../views/PlayerDetails.vue"),
       props: true,
     },
     {
@@ -78,7 +72,7 @@ const router = createRouter({
     {
       path: "/:pathMatch(.*)*",
       name: "not-found",
-      component: NotFound,
+      component: () => import("../views/NotFound.vue"),
     },
   ],
 });
