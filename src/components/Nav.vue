@@ -12,8 +12,10 @@ const userStore = useUserStore();
     <v-layout>
       <v-app-bar class="nav-bar">
         <div class="buttons">
-          <v-btn @click="router.push(`/`)">Home</v-btn>
-          <v-btn @click="router.push(`/teams`)">Teams</v-btn>
+          <v-btn @click="router.push(`/`)">
+            <v-icon icon="md:home" style="margin-right: 5px" />Home
+          </v-btn>
+          <v-btn @click="router.push(`/teams`)"> Teams</v-btn>
           <v-btn @click="router.push(`/players`)">Players</v-btn>
           <v-btn v-if="userStore.user" @click="router.push(`/account`)">
             <v-icon icon="md:person" style="margin-right: 5px" />{{
