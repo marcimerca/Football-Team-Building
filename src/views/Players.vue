@@ -33,6 +33,9 @@ getPlayers();
     >
     </v-list-item>
   </v-list>
+  <v-btn @click="router.push(`/home`)">
+    <v-icon icon="md:arrow_back" style="margin-right: 5px" /> Home
+  </v-btn>
 </template>
 
 <style scoped>
@@ -46,5 +49,8 @@ header {
   margin: 20px;
   height: 90px;
   background-color: rgba(235, 233, 233, 0.184);
+}
+button {
+  margin-top: 10px;
 }
 </style>
