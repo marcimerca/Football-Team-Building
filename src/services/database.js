@@ -44,7 +44,10 @@ export const Database = {
       const snapshot = await getDoc(doc(db, "players", id));
       return { firebaseId: snapshot.id, ...snapshot.data() };
     },
-    add: async (data) => await addDoc(collection(db, "players"), data),
+    add: async (data) => {
+      const res = await addDoc(collection(db, "players"), data);
+      return res.id;
+    },
     bulkAdd: async (data) =>
       await Promise.all(
         data.map((player) => addDoc(collection(db, "players"), player))
@@ -66,7 +69,10 @@ export const Database = {
       const snapshot = await getDoc(doc(db, "teams", id));
       return { firebaseId: snapshot.id, ...snapshot.data() };
     },
-    add: async (data) => await addDoc(collection(db, "teams"), data),
+    add: async (data) => {
+      const res = await addDoc(collection(db, "teams"), data);
+      return res.id;
+    },
     bulkAdd: async (data) =>
       await Promise.all(
         data.map((team) => addDoc(collection(db, "teams"), team))
@@ -88,7 +94,10 @@ export const Database = {
       const snapshot = await getDoc(doc(db, "users", id));
       return { firebaseId: snapshot.id, ...snapshot.data() };
     },
-    add: async (data) => await addDoc(collection(db, "users"), data),
+    add: async (data) => {
+      const res = await addDoc(collection(db, "users"), data);
+      return res.id;
+    },
     bulkAdd: async (data) =>
       await Promise.all(
         data.map((user) => addDoc(collection(db, "users"), user))
