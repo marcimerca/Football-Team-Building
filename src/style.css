@@ -38,6 +38,8 @@ body {
 
   min-width: 320px;
   min-height: 100vh;
+  background: url(/src/images/iStock-1424994401.jpg);
+  background-size: cover;
 }
 
 h1 {

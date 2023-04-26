@@ -70,6 +70,7 @@ header {
   align-items: center;
   margin-bottom: 20px;
   justify-content: center;
+  color: rgb(236, 236, 236);
 }
 .logo {
   height: 100px;
@@ -77,6 +78,7 @@ header {
 }
 .main-card {
   margin: 0 auto;
+  background-color: rgb(236, 236, 236);
 }
 .card-text {
   padding: 2px;
@@ -94,5 +96,6 @@ header {
 
 button {
   margin: 15px auto;
+  background-color: rgb(236, 236, 236);
 }
 </style>

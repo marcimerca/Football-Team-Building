@@ -16,7 +16,7 @@ getPlayers();
 
 <template>
   <header>
-    <h1>List of players</h1>
+    <h1>Players</h1>
   </header>
   <v-btn @click="router.push(`/players/new`)">
     <v-icon icon="md:person_add" style="margin-right: 5px" /> Add Player</v-btn
@@ -41,19 +41,22 @@ getPlayers();
 <style scoped>
 header {
   margin-bottom: 30px;
+  color: rgb(236, 236, 236);
 }
 .list {
   margin-top: 15px;
   height: 460px;
   overflow: scroll;
+  background-color: rgb(236, 236, 236);
 }
 .list-item {
   margin: 20px;
   height: 90px;
-  background-color: rgba(235, 233, 233, 0.184);
+  background-color: rgba(222, 219, 219, 0.436);
 }
 button {
   margin-top: 10px;
+  background-color: rgb(236, 236, 236);
 }
 
 body {

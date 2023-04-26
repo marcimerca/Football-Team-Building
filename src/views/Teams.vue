@@ -49,6 +49,7 @@ getTeams();
 <style scoped>
 header {
   margin-bottom: 10px;
+  color: rgb(236, 236, 236);
 }
 .teams-container {
   display: flex;
@@ -60,6 +61,7 @@ header {
   width: 180px;
   margin: 0 10px;
   cursor: pointer;
+  background-color: rgb(236, 236, 236);
 }
 
 .logo {
@@ -78,5 +80,8 @@ header {
 
 a {
   color: black;
+}
+button {
+  background-color: rgb(236, 236, 236);
 }
 </style>
