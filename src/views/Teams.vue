@@ -21,12 +21,13 @@ getTeams();
 </script>
 
 <template>
-  <div>
+  <header>
     <h1>Teams</h1>
-  </div>
+  </header>
 
   <div class="teams-container" v-if="teams">
     <v-card
+      class="team-card"
       :title="team.teamName"
       :subtitle="team.teamId"
       v-for="team in teams"
@@ -44,19 +45,17 @@ getTeams();
 </template>
 
 <style scoped>
+header {
+  margin-bottom: 10px;
+}
 .teams-container {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 10px;
 }
 
 .team-card {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid black;
-  padding: 18px;
-  width: fit-content;
+  width: 180px;
   margin: 0 10px;
   cursor: pointer;
 }
