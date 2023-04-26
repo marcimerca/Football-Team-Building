@@ -24,11 +24,11 @@ Database.Players.getById(props.playerId).then(
       {{ player.playerName }}
     </h1>
   </header>
-  <v-card width="500px">
-    <v-img cover max-height="250" :src="player.playerCover"></v-img>
+  <v-card class="main-card" width="500px">
+    <v-img cover max-height="260" :src="player.playerCover"></v-img>
     <v-card-item>
       <v-card-title>{{ player.playerPosition }}</v-card-title>
-      <v-card-subtitle>
+      <v-card-subtitle class="subtitle">
         <span class="me-1">#{{ player.playerNumber }}</span>
       </v-card-subtitle>
       <v-card-item class="info">
@@ -58,14 +58,19 @@ Database.Players.getById(props.playerId).then(
 
 <style scoped>
 header {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
-
+.main-card {
+  margin: 0 auto;
+}
+.subtitle {
+  margin-bottom: -12px;
+}
 .card-text {
   padding: 2px;
 }
 
 .footer {
-  margin-top: 20px;
+  margin-top: 5px;
 }
 </style>
