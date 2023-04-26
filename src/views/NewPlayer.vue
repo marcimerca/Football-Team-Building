@@ -1,6 +1,8 @@
 <script setup>
 import { Database } from "../services/database";
 import { ref } from "vue";
+import { useRouter } from "vue-router";
+const router = useRouter();
 const players = ref([]);
 const getPlayers = async () => {
   players.value = await Database.Players.get();
@@ -34,6 +36,9 @@ getPlayers();
       model-value="1.50"
     ></v-text-field>
   </div>
+  <v-btn @click="router.push(`/players`)">
+    <v-icon icon="md:arrow_back" style="margin-right: 5px" /> Players
+  </v-btn>
 </template>
 
 <style scoped>
