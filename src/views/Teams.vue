@@ -29,7 +29,6 @@ getTeams();
     <v-card
       class="team-card"
       :title="team.teamName"
-      :subtitle="team.teamId"
       v-for="team in teams"
       :key="team.teamId"
     >
@@ -40,8 +39,11 @@ getTeams();
     </v-card>
   </div>
   <br />
-  <span>Return back to </span>
-  <RouterLink to="/"><button>Home</button></RouterLink>
+  <RouterLink to="/"
+    ><v-btn>
+      <v-icon icon="md:arrow_back" style="margin-right: 5px" />Home
+    </v-btn></RouterLink
+  >
 </template>
 
 <style scoped>
