@@ -53,14 +53,11 @@ Database.Teams.getById(props.teamId).then(
           {{ team.teamNicknames }}
         </v-card-text>
       </v-card-item>
-
-      <v-card-actions class="bottom-card">
-        <v-btn @click="router.push(`/teams`)">
-          <v-icon icon="md:arrow_back" style="margin-right: 5px" /> Teams
-        </v-btn>
-        <span class="material-symbols-outlined"> </span>
-      </v-card-actions>
+      <br />
     </v-card>
+    <v-btn @click="router.push(`/teams`)">
+      <v-icon icon="md:arrow_back" style="margin-right: 5px" /> Teams
+    </v-btn>
   </div>
   <div v-else>
     <h1>Team not found with id {{ teamId }}</h1>
@@ -96,6 +93,6 @@ header {
 }
 
 button {
-  margin: 0 auto;
+  margin: 15px auto;
 }
 </style>
