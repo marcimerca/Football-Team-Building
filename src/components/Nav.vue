@@ -33,6 +33,10 @@ const userStore = useUserStore();
           <v-icon icon="md:logout" style="margin-right: 5px" />
           Logout
         </v-btn>
+        <v-btn v-else @click="router.push('/login')">
+          <v-icon icon="md:login" style="margin-right: 5px" />
+          Login
+        </v-btn>
       </v-app-bar>
     </v-layout>
   </div>
