@@ -44,6 +44,8 @@ header {
 }
 .list {
   margin-top: 15px;
+  height: 460px;
+  overflow: scroll;
 }
 .list-item {
   margin: 20px;
@@ -52,5 +54,9 @@ header {
 }
 button {
   margin-top: 10px;
+}
+
+body {
+  background-size: cover;
 }
 </style>
