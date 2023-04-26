@@ -18,7 +18,9 @@ getPlayers();
   <header>
     <h1>List of players</h1>
   </header>
-  <v-btn @click="router.push(`/players/new`)">Add Player</v-btn>
+  <v-btn @click="router.push(`/players/new`)">
+    <v-icon icon="md:person_add" style="margin-right: 5px" /> Add Player</v-btn
+  >
   <v-list class="list" lines="one">
     <v-list-item
       class="list-item"
@@ -31,6 +33,9 @@ getPlayers();
     >
     </v-list-item>
   </v-list>
+  <v-btn @click="router.push(`/home`)">
+    <v-icon icon="md:arrow_back" style="margin-right: 5px" /> Home
+  </v-btn>
 </template>
 
 <style scoped>
@@ -44,5 +49,8 @@ header {
   margin: 20px;
   height: 90px;
   background-color: rgba(235, 233, 233, 0.184);
+}
+button {
+  margin-top: 10px;
 }
 </style>
