@@ -43,15 +43,15 @@ const userStore = useUserStore();
       <v-app-bar class="mobile-bar">
         <div class="buttons">
           <v-btn @click="router.push(`/`)">
-            <v-icon icon="md:home" style="margin-right: 5px" />H
+            <v-icon icon="md:home" style="margin-right: 5px" />Home
           </v-btn>
           <v-btn @click="router.push(`/teams`)">
             <v-icon icon="md:sports_soccer" style="margin-right: 5px" />
-            T</v-btn
+            Teams</v-btn
           >
           <v-btn @click="router.push(`/players`)">
             <v-icon icon="md:groups" style="margin-right: 5px" />
-            P</v-btn
+            Players</v-btn
           >
           <v-btn v-if="userStore.user" @click="router.push(`/account`)">
             <v-icon icon="md:person" style="margin-right: 5px" />{{
