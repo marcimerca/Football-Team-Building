@@ -84,7 +84,11 @@ body {
 }
 @media only screen and (max-width: 580px) {
   .main-card {
-    width: 350px;
+    width: 300px;
+  }
+  body {
+    background-size: cover;
+    width: 420px;
   }
 }
 </style>
