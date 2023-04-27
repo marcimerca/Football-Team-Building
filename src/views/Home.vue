@@ -12,7 +12,7 @@ const showWho = ref(false);
   </header>
   <div class="main-content">
     <div class="info">
-      <v-card color="rgb(236,236,236)">
+      <v-card class="card">
         <v-card-item>
           <v-card-actions>
             <v-card-item class="button-container">
@@ -79,7 +79,7 @@ const showWho = ref(false);
       </v-card>
     </div>
     <div class="why-who">
-      <v-card color="rgb(236,236,236)">
+      <v-card class="card">
         <v-card-item>
           <v-card-actions>
             <v-card-item class="button-container">
@@ -143,7 +143,7 @@ const showWho = ref(false);
       </v-card>
     </div>
     <div class="explore">
-      <v-card color="rgb(236,236,236)">
+      <v-card class="card">
         <v-card-item>
           <v-card-title>
             <v-btn variant="text">
@@ -179,7 +179,9 @@ header {
   flex-wrap: wrap;
   flex-direction: row;
 }
-
+.card {
+  background-color: rgb(236, 236, 236);
+}
 .info,
 .why-who,
 .explore {
@@ -187,7 +189,10 @@ header {
   width: 30%;
   text-align: left;
   margin-bottom: 15px;
-  color: white;
+}
+
+.card {
+  background-color: rgb(236, 236, 236);
 }
 
 .info {
