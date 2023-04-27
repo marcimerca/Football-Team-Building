@@ -67,6 +67,15 @@ const addPlayer = async () => {
       type="url"
       clearable
       label="Image"
+      placeholder="Insert image url"
+      v-model="player.playerImage"
+    ></v-text-field>
+    <v-text-field
+      class="input"
+      type="url"
+      clearable
+      label="Cover"
+      placeholder="Insert image url"
       v-model="player.playerCover"
     ></v-text-field>
   </div>
@@ -78,16 +87,21 @@ const addPlayer = async () => {
 <style scoped>
 header {
   margin-bottom: 30px;
+  color: rgb(236, 236, 236);
 }
 .form-container {
   display: flex;
-  gap: 20px;
+  gap: 10px;
   flex-wrap: wrap;
-  width: 100%;
-  font-size: 4px;
+  width: 80%;
+  height: 60%;
+  padding: 18px;
+  margin: 0 auto;
+  margin-bottom: 15px;
+  background-color: rgb(236, 236, 236);
 }
 
 .input {
-  width: 60%;
+  width: 40%;
 }
 </style>
