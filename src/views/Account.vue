@@ -1,5 +1,6 @@
 <template>
   <div
+    class="content"
     style="
       display: flex;
       justify-content: center;
@@ -8,15 +9,33 @@
     "
   >
     <h1>Account</h1>
-    <p>{{ userStore.user.displayName }}</p>
-    <v-img
-      :src="userStore.user.photoURL"
-      width="50px"
-      style="border-radius: 50%"
-    >
-    </v-img>
+    <v-card class="user-card" :title="userStore.user.displayName">
+      <v-img
+        class="avatar"
+        :src="userStore.user.photoURL"
+        width="50px"
+        style="border-radius: 50%"
+      >
+      </v-img>
+    </v-card>
   </div>
 </template>
+
+<style scoped>
+h1 {
+  margin-bottom: 20px;
+}
+.content {
+  color: rgb(236, 236, 236);
+}
+.user-card {
+  padding: 15px;
+}
+.avatar {
+  margin-top: 10px;
+  margin: 0 auto;
+}
+</style>
 
 <script setup>
 import { useUserStore } from "../store/user";
