@@ -63,6 +63,7 @@ Database.Players.getById(props.playerId).then(
 <style scoped>
 header {
   margin-bottom: 10px;
+  color: rgb(236, 236, 236);
 }
 .main-card {
   margin: 0 auto;
