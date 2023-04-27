@@ -144,30 +144,27 @@ const showWho = ref(false);
     </div>
     <div class="explore">
       <v-card class="card">
-        <v-card-item>
-          <v-card-title>
-            <v-btn variant="text">
-              <h2>Explore</h2>
-            </v-btn>
-          </v-card-title>
-          <v-spacer></v-spacer>
-          <v-card-text>
-            <p>
-              Click one of the button in the Navigation Bar to start exploring
-              this project.
-            </p>
-          </v-card-text>
-          <v-card-item class="ball">
-            <v-icon icon="md:home" size="25px" style="margin: 3px" />
-            <v-icon icon="md:sports_soccer" style="margin: 3px" size="25px" />
-            <v-icon icon="md:groups" style="margin: 3px" size="25px" />
-          </v-card-item>
+        <v-card-item class="explore-container">
+          <v-btn variant="text">
+            <h2>Explore</h2>
+          </v-btn>
+        </v-card-item>
+        <v-spacer></v-spacer>
+        <v-card-text>
+          <p>
+            Click one of the button in the Navigation Bar to start exploring
+            this project.
+          </p>
+        </v-card-text>
+        <v-card-item class="ball">
+          <v-icon icon="md:home" size="25px" style="margin: 3px" />
+          <v-icon icon="md:sports_soccer" style="margin: 3px" size="25px" />
+          <v-icon icon="md:groups" style="margin: 3px" size="25px" />
         </v-card-item>
       </v-card>
     </div>
   </div>
 </template>
-
 <style scoped>
 header {
   color: rgb(236, 236, 236);
@@ -204,7 +201,10 @@ header {
   display: flex;
   align-items: center;
 }
-
+.explore-container {
+  text-align: center;
+  margin-top: 17px;
+}
 a {
   margin: 0 10px;
   color: black;
