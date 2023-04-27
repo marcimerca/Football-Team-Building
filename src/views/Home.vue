@@ -15,7 +15,7 @@
                 color="black"
                 variant="text"
               >
-                <h2>About this project</h2>
+                <h2>About</h2>
               </v-btn>
             </v-card-item>
           </v-card-actions>

@@ -104,4 +104,10 @@ header {
 .input {
   width: 40%;
 }
+
+@media only screen and (max-width: 580px) {
+  .form-container {
+    width: 90%;
+  }
+}
 </style>

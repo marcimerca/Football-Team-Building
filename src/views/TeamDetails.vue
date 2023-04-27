@@ -21,13 +21,12 @@ Database.Teams.getById(props.teamId).then(
 <template>
   <div v-if="team" class="container">
     <header>
-      <img class="logo" :src="team.teamLogo" />
       <h1 v-if="team.teamExtendedName">
         {{ team.teamExtendedName }}
       </h1>
       <h1 v-else>{{ team.teamName }}</h1>
     </header>
-    <v-card class="main-card" min-width="400" max-width="400">
+    <v-card class="main-card">
       <v-img
         class="align-end text-white"
         height="300"
@@ -78,6 +77,7 @@ header {
 }
 .main-card {
   margin: 0 auto;
+  width: 400px;
   background-color: rgb(236, 236, 236);
 }
 .card-text {
@@ -97,5 +97,12 @@ header {
 button {
   margin: 15px auto;
   background-color: rgb(236, 236, 236);
+}
+
+@media only screen and (max-width: 580px) {
+  .container .main-card {
+    width: 80%;
+    height: 500px;
+  }
 }
 </style>

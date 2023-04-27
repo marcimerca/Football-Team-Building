@@ -97,7 +97,7 @@ button {
   }
   .team-card {
     width: 160px;
-    height: 160px;
+    height: 180px;
     margin: 0 5px;
     cursor: pointer;
     background-color: rgb(236, 236, 236);
