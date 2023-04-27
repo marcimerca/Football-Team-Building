@@ -79,7 +79,9 @@ header {
 .footer {
   margin-top: 5px;
 }
-
+body {
+  background-size: cover;
+}
 @media only screen and (max-width: 580px) {
   .main-card {
     width: 350px;
