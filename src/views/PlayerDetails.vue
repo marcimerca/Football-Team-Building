@@ -25,7 +25,7 @@ Database.Players.getById(props.playerId).then(
         {{ player.playerName }}
       </h1>
     </header>
-    <v-card class="main-card" width="500px">
+    <v-card class="main-card">
       <v-img cover max-height="260" :src="player.playerCover"></v-img>
       <v-card-item>
         <v-card-title>{{ player.playerPosition }}</v-card-title>
@@ -67,6 +67,7 @@ header {
 }
 .main-card {
   margin: 0 auto;
+  width: 500px;
 }
 .subtitle {
   margin-bottom: -12px;
@@ -77,5 +78,11 @@ header {
 
 .footer {
   margin-top: 5px;
+}
+
+@media only screen and (max-width: 580px) {
+  .main-card {
+    width: 350px;
+  }
 }
 </style>
