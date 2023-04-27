@@ -62,4 +62,16 @@ button {
 body {
   background-size: cover;
 }
+
+/*Mobile version*/
+
+@media only screen and (max-width: 580px) {
+  .list {
+    margin-top: 15px;
+    height: 460px;
+    width: 380px;
+    overflow: scroll;
+    background-color: rgb(236, 236, 236);
+  }
+}
 </style>

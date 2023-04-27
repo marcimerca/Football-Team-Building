@@ -43,27 +43,36 @@ const userStore = useUserStore();
       <v-app-bar class="mobile-bar">
         <div class="buttons">
           <v-btn @click="router.push(`/`)">
-            <v-icon icon="md:home" style="margin-right: 5px" />Home
+            <v-icon icon="md:home" style="margin-right: 5px" size="25px" />
           </v-btn>
           <v-btn @click="router.push(`/teams`)">
-            <v-icon icon="md:sports_soccer" style="margin-right: 5px" />
-            Teams</v-btn
-          >
+            <v-icon
+              icon="md:sports_soccer"
+              style="margin-right: 5px"
+              size="25px"
+            />
+          </v-btn>
           <v-btn @click="router.push(`/players`)">
-            <v-icon icon="md:groups" style="margin-right: 5px" />
-            Players</v-btn
-          >
+            <v-icon icon="md:groups" style="margin-right: 5px" size="25px" />
+          </v-btn>
           <v-btn v-if="userStore.user" @click="router.push(`/account`)">
-            <v-icon icon="md:person" style="margin-right: 5px" />{{
+            <v-icon icon="md:person" style="margin-right: 5px" size="25px" />{{
               userStore.user.displayName[0]
-            }}</v-btn
+            }}{{ userStore.user.displayName[1]
+            }}{{ userStore.user.displayName[2] }}.</v-btn
           >
         </div>
-        <v-btn v-if="userStore.user" @click="logout" style="margin-right: 10px">
-          <v-icon icon="md:logout" style="margin-right: 5px" />
+        <v-btn
+          class="right-button"
+          v-if="userStore.user"
+          @click="logout"
+          style="margin-right: 1px"
+          size="25px"
+        >
+          <v-icon icon="md:logout" style="margin-right: 2px" size="25px" />
         </v-btn>
-        <v-btn v-else @click="router.push('/login')">
-          <v-icon icon="md:login" style="margin-right: 5px" />
+        <v-btn class="right-button" v-else @click="router.push('/login')">
+          <v-icon icon="md:login" style="margin-right: 2px" size="25px" />Log
         </v-btn>
       </v-app-bar>
     </v-layout>
@@ -89,12 +98,18 @@ const userStore = useUserStore();
     display: none;
   }
   .mobile-bar {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    display: inline-flex;
     height: 4rem;
     background-color: white;
     z-index: 900;
+    border: 1px solid blue;
+  }
+  .buttons {
+    width: 60%;
+  }
+  .right-button {
+    text-align: right;
+    display: flex;
   }
 }
 </style>

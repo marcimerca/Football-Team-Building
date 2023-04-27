@@ -51,6 +51,7 @@ header {
   margin-bottom: 10px;
   color: rgb(236, 236, 236);
 }
+
 .teams-container {
   display: flex;
   justify-content: center;
@@ -83,5 +84,23 @@ a {
 }
 button {
   background-color: rgb(236, 236, 236);
+}
+
+/*Mobile version*/
+
+@media only screen and (max-width: 580px) {
+  .teams-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-direction: column;
+  }
+  .team-card {
+    width: 160px;
+    height: 160px;
+    margin: 0 5px;
+    cursor: pointer;
+    background-color: rgb(236, 236, 236);
+  }
 }
 </style>

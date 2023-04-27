@@ -102,7 +102,7 @@
               Close
             </v-btn>
           </v-card-item>
-          <v-divider :thickness="1"></v-divider>
+          <v-divider :thickness="1" color="black"></v-divider>
 
           <v-card-actions>
             <v-card-item class="button-container">
@@ -223,6 +223,12 @@ a {
 /*Mobile version*/
 
 @media only screen and (max-width: 580px) {
+  body {
+    background-color: rgb(236, 236, 236);
+  }
+  header h1 {
+    font-size: 40px;
+  }
   .main-content {
     display: flex;
     flex-direction: column;
@@ -239,6 +245,7 @@ a {
   }
   button h2 {
     width: 100%;
+    font-size: 20px;
   }
 }
 </style>
