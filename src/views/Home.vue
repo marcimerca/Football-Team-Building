@@ -1,10 +1,3 @@
-<script setup>
-import { ref } from "vue";
-const showAbout = ref(false);
-const showWhy = ref(false);
-const showWho = ref(false);
-</script>
-
 <template>
   <header>
     <h1>Welcome to</h1>
@@ -165,6 +158,12 @@ const showWho = ref(false);
     </div>
   </div>
 </template>
+<script setup>
+import { ref } from "vue";
+const showAbout = ref(false);
+const showWhy = ref(false);
+const showWho = ref(false);
+</script>
 <style scoped>
 header {
   color: rgb(236, 236, 236);
