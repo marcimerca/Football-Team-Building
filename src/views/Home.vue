@@ -219,4 +219,23 @@ a {
   text-align: center;
   margin: 0 auto;
 }
+
+/*Mobile version*/
+
+@media only screen and (max-width: 580px) {
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .info,
+  .why-who,
+  .explore {
+    margin: 0 auto;
+    width: 80%;
+    height: 50%;
+    text-align: left;
+    margin-bottom: 15px;
+  }
+}
 </style>
