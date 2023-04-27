@@ -102,7 +102,6 @@ const userStore = useUserStore();
     height: 4rem;
     background-color: white;
     z-index: 900;
-    border: 1px solid blue;
   }
   .buttons {
     width: 60%;
