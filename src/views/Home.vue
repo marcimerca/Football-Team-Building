@@ -237,5 +237,8 @@ a {
     text-align: left;
     margin-bottom: 15px;
   }
+  button h2 {
+    width: 100%;
+  }
 }
 </style>
