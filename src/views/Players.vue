@@ -44,6 +44,7 @@ header {
   color: rgb(236, 236, 236);
 }
 .list {
+  width: 400px;
   margin-top: 15px;
   height: 460px;
   overflow: scroll;
