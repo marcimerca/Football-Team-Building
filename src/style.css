@@ -38,7 +38,7 @@ body {
 
   min-width: 320px;
   min-height: 100vh;
-  background: url(/src/images/bg-smaller.jpg);
+  background: url(/src/images/bg-xs.jpg);
   background-size: cover;
 }
 
