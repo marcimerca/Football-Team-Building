@@ -29,8 +29,8 @@ h1 {
   color: rgb(236, 236, 236);
 }
 .user-card {
-  padding: 15px;
-  background-color: rgb(236, 236, 236);
+  padding-bottom: 30px;
+  background-color: rgba(236, 236, 236);
 }
 .avatar {
   margin-top: 10px;
