@@ -46,12 +46,24 @@ Database.Teams.getById(props.teamId).then(
         ><em>Stadium: {{ team.teamStadiumName }}</em></v-card-subtitle
       >
       <v-card-item class="key-value">
+        <v-chip>Team Colours</v-chip>
+        <br />
+        <v-img
+          class="colours"
+          width="20px"
+          aspect-ratio="auto 20 / 13"
+          height="13px"
+          :src="team.teamColours"
+        ></v-img>
+      </v-card-item>
+      <v-card-item class="key-value">
         <v-chip>Club Foundation:</v-chip>
         <br />
         <v-card-text class="card-text">{{
           team.teamFoundationDate
         }}</v-card-text>
       </v-card-item>
+
       <v-card-item class="key-value">
         <v-chip>Nicknames:</v-chip>
         <br />
@@ -88,17 +100,24 @@ header {
   background-color: rgb(236, 236, 236);
 }
 .card-text {
-  padding: 2px;
+  padding: 0;
+  margin-top: 5px;
 }
 .pt-4 {
   margin-bottom: 2px;
 }
 .key-value {
-  margin-bottom: -15px;
+  margin-bottom: -12px;
 }
 
 .bottom-card {
   margin-top: 12px;
+  margin-bottom: 2px;
+}
+
+.colours {
+  margin: 0 auto;
+  margin-top: 5px;
 }
 
 button {
@@ -109,7 +128,7 @@ button {
 @media only screen and (max-width: 580px) {
   .container .main-card {
     width: 80%;
-    height: 500px;
+    height: 560px;
   }
 }
 </style>
