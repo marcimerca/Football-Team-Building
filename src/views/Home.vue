@@ -99,11 +99,14 @@ import playerimg from "../images/player.png";
             <v-icon icon="md:groups" style="margin: 3px" size="25px" />
           </v-card-item>
         </v-card-item>
-        <v-img
-          class="explore-img"
-          contain
-          height="230"
-          :src="playerimg"
+        <v-img class="explore-img" contain height="230" :src="playerimg">
+          <template v-slot:placeholder>
+            <div class="d-flex align-center justify-center fill-height">
+              <v-progress-circular
+                color="grey-lighten-4"
+                indeterminate
+              ></v-progress-circular>
+            </div> </template
         ></v-img>
       </v-card>
     </div>

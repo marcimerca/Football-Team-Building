@@ -26,7 +26,16 @@ Database.Players.getById(props.playerId).then(
       </h1>
     </header>
     <v-card class="main-card">
-      <v-img cover max-height="260" :src="player.playerCover"></v-img>
+      <v-img cover max-height="260" :src="player.playerCover">
+        <template v-slot:placeholder>
+          <div class="d-flex align-center justify-center fill-height">
+            <v-progress-circular
+              color="grey-lighten-4"
+              indeterminate
+            ></v-progress-circular>
+          </div>
+        </template>
+      </v-img>
       <v-card-item>
         <v-card-title>{{ player.playerPosition }}</v-card-title>
         <v-card-subtitle class="subtitle">
