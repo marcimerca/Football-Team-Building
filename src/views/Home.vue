@@ -1,3 +1,6 @@
+<script setup>
+import playerimg from "../images/player.png";
+</script>
 <template>
   <header>
     <h1>Welcome to</h1>
@@ -79,7 +82,7 @@
       </v-card>
     </div>
     <div class="explore">
-      <v-card class="explore-card">
+      <v-card class="card">
         <v-card-item>
           <v-card-item color="black">
             <h2>Explore</h2>
@@ -90,12 +93,18 @@
               this project.
             </p>
           </v-card-text>
-          <v-card-item class="ball">
-            <v-icon icon="md:home" size="25px" style="margin: 3px" />
+          <v-card-item class="explore-icons">
+            <v-icon icon="md:home" size="25px" style="margin: 3px"></v-icon>
             <v-icon icon="md:sports_soccer" style="margin: 3px" size="25px" />
             <v-icon icon="md:groups" style="margin: 3px" size="25px" />
           </v-card-item>
         </v-card-item>
+        <v-img
+          class="explore-img"
+          contain
+          height="230"
+          :src="playerimg"
+        ></v-img>
       </v-card>
     </div>
   </div>
@@ -128,11 +137,10 @@ header {
   height: 450px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
 }
 .explore-card {
   background-color: rgb(236, 236, 236);
-  height: 225px;
+  height: 450px;
   display: flex;
   flex-direction: column;
   margin-top: 0;
@@ -141,6 +149,7 @@ header {
 .explore-card h2 {
   margin-top: 10px;
 }
+
 .info {
   height: 50%;
   width: 33%;
@@ -150,13 +159,17 @@ a {
   margin: 0 10px;
   color: black;
 }
-.ball {
+.explore-icons {
   text-align: center;
-  width: 100px;
+  width: 150px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.explore-img {
+  margin-top: -25px;
 }
 
 /*Mobile version*/
@@ -181,6 +194,12 @@ a {
     height: 50%;
     text-align: left;
     margin-bottom: 15px;
+  }
+
+  .card {
+    height: 30%;
+    display: flex;
+    flex-direction: column;
   }
   button h2 {
     width: 100%;
