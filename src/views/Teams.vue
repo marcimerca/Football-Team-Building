@@ -40,7 +40,7 @@ getTeams();
   </div>
   <br />
   <RouterLink to="/"
-    ><v-btn>
+    ><v-btn class="footer-button">
       <v-icon icon="md:arrow_back" style="margin-right: 5px" />Home
     </v-btn></RouterLink
   >
@@ -97,10 +97,13 @@ button {
   }
   .team-card {
     width: 160px;
-    height: 180px;
+    height: 190px;
     margin: 0 5px;
     cursor: pointer;
     background-color: rgb(236, 236, 236);
+  }
+  .footer-button {
+    margin-top: -5px;
   }
 }
 </style>
