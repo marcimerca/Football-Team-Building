@@ -1,5 +1,8 @@
 <script setup>
+import { useRouter } from "vue-router";
 import playerimg from "../images/player.png";
+const router = useRouter();
+import tabsInfo from "../data/tab-data.json";
 </script>
 <template>
   <header>
@@ -14,7 +17,7 @@ import playerimg from "../images/player.png";
             <h2>About</h2>
           </v-card-item>
 
-          <v-card-text>
+          <v-card-text class="card-text">
             <p>
               This project was created using
               <strong
@@ -59,7 +62,7 @@ import playerimg from "../images/player.png";
             <h2>Why ?</h2>
           </v-card-item>
 
-          <v-card-text>
+          <v-card-text class="card-text">
             <p>
               I decided to undertake this project with the aim of putting into
               practice the knowledge acquired so far in my web developing
@@ -71,7 +74,7 @@ import playerimg from "../images/player.png";
           <v-card-item>
             <h2>Who ?</h2>
           </v-card-item>
-          <v-card-text>
+          <v-card-text class="card-text">
             <p>
               My name is Marcello Mercanzin, i'm 26 and i live near Vicenza.
               I've always been interested in the world of web development, and
@@ -87,16 +90,36 @@ import playerimg from "../images/player.png";
           <v-card-item color="black">
             <h2>Explore</h2>
           </v-card-item>
-          <v-card-text>
+          <v-card-text class="card-text">
             <p>
               Click one of the button in the Navigation Bar to start exploring
               this project.
             </p>
           </v-card-text>
           <v-card-item class="explore-icons">
-            <v-icon icon="md:home" size="25px" style="margin: 3px"></v-icon>
-            <v-icon icon="md:sports_soccer" style="margin: 3px" size="25px" />
-            <v-icon icon="md:groups" style="margin: 3px" size="25px" />
+            <v-btn @click="router.push(`/`)" variant="text">
+              <v-icon
+                icon="md:home"
+                size="25px"
+                style="margin-right: 5px"
+              ></v-icon>
+              Home
+            </v-btn>
+            <v-btn @click="router.push(`/teams`)" variant="text">
+              <v-icon
+                icon="md:sports_soccer"
+                size="25px"
+                style="margin-right: 5px"
+              />
+              Teams
+            </v-btn>
+            <v-btn @click="router.push(`/players`)" variant="text">
+              <v-icon
+                icon="md:groups"
+                size="25px"
+                style="margin-right: 5px"
+              />Players
+            </v-btn>
           </v-card-item>
         </v-card-item>
         <v-img class="explore-img" contain height="230" :src="playerimg">
@@ -141,18 +164,13 @@ header {
   display: flex;
   flex-direction: column;
 }
-.explore-card {
-  background-color: rgb(236, 236, 236);
-  height: 450px;
-  display: flex;
-  flex-direction: column;
-  margin-top: 0;
+.card .card-text {
+  font-size: 11px;
 }
-
-.explore-card h2 {
-  margin-top: 10px;
+.explore .card .explore-icons {
+  width: 400px;
+  margin: 0 auto;
 }
-
 .info {
   height: 50%;
   width: 33%;
@@ -161,14 +179,6 @@ header {
 a {
   margin: 0 10px;
   color: black;
-}
-.explore-icons {
-  text-align: center;
-  width: 150px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .explore-img {
@@ -181,29 +191,38 @@ a {
   body {
     background-color: rgb(236, 236, 236);
   }
+
+  .main-content {
+    display: contents;
+  }
   header h1 {
     font-size: 40px;
   }
   .main-content {
+    width: 100%;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    border: 1px solid red;
   }
   .info,
   .why-who,
   .explore {
     margin: 0 auto;
-    width: 80%;
+    width: 100%;
     height: 50%;
     text-align: left;
     margin-bottom: 15px;
   }
 
   .card {
-    height: 30%;
+    width: 100%;
+    height: 20%;
     display: flex;
     flex-direction: column;
+    padding: 0px;
   }
+
   button h2 {
     width: 100%;
     font-size: 20px;
