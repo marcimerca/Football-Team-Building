@@ -138,7 +138,7 @@ const tab = ref("");
       <v-tab value="three">Explore</v-tab>
     </v-tabs>
 
-    <v-card-text>
+    <v-card-text style="font-size: 12px">
       <v-window v-model="tab">
         <v-window-item value="one" class="text-left">
           <p>
