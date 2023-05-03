@@ -68,12 +68,16 @@ body {
 
 @media only screen and (max-width: 580px) {
   .list {
-    height: 560px;
+    height: 450px;
     width: 300px;
     overflow: scroll;
-    background-color: rgb(236, 236, 236);
+    background-color: transparent;
     margin: 15px auto;
     padding: 0;
+  }
+
+  .list-item {
+    background-color: rgba(236, 236, 236);
   }
 }
 </style>
