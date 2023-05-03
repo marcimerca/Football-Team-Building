@@ -27,6 +27,7 @@ getTeams();
 
   <div class="teams-container" v-if="teams">
     <v-card
+      @click="goToTeam(team.firebaseId)"
       class="team-card"
       :title="team.teamName"
       v-for="team in teams"
@@ -89,6 +90,9 @@ button {
 /*Mobile version*/
 
 @media only screen and (max-width: 580px) {
+  body {
+    height: 10px;
+  }
   .teams-container {
     display: flex;
     justify-content: center;
@@ -103,7 +107,7 @@ button {
     background-color: rgb(236, 236, 236);
   }
   .footer-button {
-    margin-top: -5px;
+    margin-top: -10px;
   }
 }
 </style>
