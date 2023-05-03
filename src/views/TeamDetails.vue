@@ -128,7 +128,7 @@ button {
 @media only screen and (max-width: 580px) {
   .container .main-card {
     width: 80%;
-    height: 560px;
+    height: 570px;
   }
 }
 </style>
