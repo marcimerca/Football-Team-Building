@@ -33,9 +33,6 @@ getPlayers();
     >
     </v-list-item>
   </v-list>
-  <v-btn @click="router.push(`/home`)">
-    <v-icon icon="md:arrow_back" style="margin-right: 5px" /> Home
-  </v-btn>
 </template>
 
 <style scoped>
@@ -71,17 +68,12 @@ body {
 
 @media only screen and (max-width: 580px) {
   .list {
-    height: 400px;
-    width: 250px;
+    height: 560px;
+    width: 300px;
     overflow: scroll;
     background-color: rgb(236, 236, 236);
     margin: 15px auto;
     padding: 0;
-  }
-  .list-item {
-    margin: 15px;
-    height: 60px;
-    background-color: rgba(222, 219, 219, 0.436);
   }
 }
 </style>
