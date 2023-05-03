@@ -353,7 +353,7 @@ a {
     margin: 10px 7px;
   }
   ul {
-    padding-left: 13px;
+    padding-left: 15px;
     padding-right: 0px;
   }
   h3 {
