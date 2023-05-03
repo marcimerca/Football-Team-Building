@@ -70,7 +70,7 @@ body {
   .list {
     margin-top: 15px;
     height: 460px;
-    width: 300px;
+    width: 400px;
     overflow: scroll;
     background-color: rgb(236, 236, 236);
   }
