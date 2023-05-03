@@ -42,6 +42,8 @@ getPlayers();
 header {
   margin-bottom: 30px;
   color: rgb(236, 236, 236);
+  margin: 0 auto;
+  text-align: center;
 }
 .list {
   width: 400px;
@@ -49,6 +51,7 @@ header {
   height: 460px;
   overflow: scroll;
   background-color: rgb(236, 236, 236);
+  text-align: center;
 }
 .list-item {
   margin: 20px;
@@ -68,11 +71,17 @@ body {
 
 @media only screen and (max-width: 580px) {
   .list {
-    margin-top: 15px;
-    height: 460px;
-    width: 400px;
+    height: 400px;
+    width: 250px;
     overflow: scroll;
     background-color: rgb(236, 236, 236);
+    margin: 15px auto;
+    padding: 0;
+  }
+  .list-item {
+    margin: 15px;
+    height: 60px;
+    background-color: rgba(222, 219, 219, 0.436);
   }
 }
 </style>
