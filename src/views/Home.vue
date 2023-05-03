@@ -2,7 +2,6 @@
 import { useRouter } from "vue-router";
 import playerimg from "../images/player.png";
 const router = useRouter();
-import tabsInfo from "../data/tab-data.json";
 </script>
 <template>
   <header>
@@ -203,7 +202,6 @@ a {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    border: 1px solid red;
   }
   .info,
   .why-who,
