@@ -355,6 +355,7 @@ a {
   ul {
     padding-left: 16px;
     padding-right: 0px;
+    margin-top: -10px;
   }
   h3 {
     padding-left: 13px;
