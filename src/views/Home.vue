@@ -33,7 +33,7 @@ header {
   header {
     color: rgb(236, 236, 236);
 
-    font-size: 12px;
+    font-size: 10px;
   }
 }
 </style>

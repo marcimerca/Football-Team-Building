@@ -119,30 +119,12 @@ const tab = ref("");
   body {
     background-color: rgb(236, 236, 236);
   }
-  header h1 {
-    font-size: 40px;
-  }
-  .main-content {
-    display: none;
-    flex-direction: column;
-    flex-wrap: wrap;
-  }
   .tab-card {
     display: inline-block;
-  }
-  .info,
-  .why-who,
-  .explore {
-    margin: 0 auto;
-    width: 100%;
-    height: 50%;
-    text-align: left;
-    margin-bottom: 15px;
-  }
-  .tab-card {
     width: 320px;
     padding: 0;
     margin: 0;
+    margin-top: -7px;
     border: 0;
     background-color: rgba(236, 236, 236);
   }
